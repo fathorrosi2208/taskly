@@ -108,7 +108,9 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   leading: Checkbox(
-                    checkColor: HelperFunction.isDarkMode(context) ? $styles.colors.dark : $styles.colors.light,
+                    checkColor: HelperFunction.isDarkMode(context)
+                        ? $styles.colors.dark
+                        : $styles.colors.light,
                     value: todo.isCompleted,
                     onChanged: (value) {
                       context.read<TodoCubit>().updateTodoItem(todo);

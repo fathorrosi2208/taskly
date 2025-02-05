@@ -45,7 +45,7 @@ class TodoRepository implements TodoRepositories {
     try {
       final db = await databaseHelper.database;
       final model = TodoModel.fromEntity(todo);
-      
+
       await db.update(
         'todos',
         model.toMap(),
